@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Free Instagram Followers Instantly!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide-static@latest/dist/lucide.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .instagram-gradient-text {
+            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .notification-animation { animation: slideInUp 0.5s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto max-w-lg p-4 sm:p-6 text-center">
+        <header class="my-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                Get <span class="instagram-gradient-text">Free</span> Instagram Followers Instantly!
+            </h1>
+        </header>
+
+        <main class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+            <div class="mb-6">
+                <div class="relative">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <input type="text" id="username" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all" placeholder="your_username" required>
+                </div>
+            </div>
+            <button id="cta-button" class="w-full text-white font-bold text-xl py-4 px-6 rounded-lg bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-600 hover:scale-105 transform transition-transform duration-300 ease-out shadow-lg">
+                Claim My Free Followers!
+            </button>
+            <div class="mt-8 border-t pt-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">How It Works in 3 Simple Steps</h3>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="flex flex-col items-center"><div class="bg-purple-100 rounded-full p-3 mb-2"><i data-lucide="user-check" class="text-purple-600"></i></div><p class="text-sm font-medium text-gray-600">1. Enter Username</p></div>
+                    <div class="flex flex-col items-center"><div class="bg-pink-100 rounded-full p-3 mb-2"><i data-lucide="download-cloud" class="text-pink-600"></i></div><p class="text-sm font-medium text-gray-600">2. Verify & Install</p></div>
+                    <div class="flex flex-col items-center"><div class="bg-yellow-100 rounded-full p-3 mb-2"><i data-lucide="gift" class="text-yellow-600"></i></div><p class="text-sm font-medium text-gray-600">3. Get Followers</p></div>
+                </div>
+            </div>
+        </main>
+        
+        <section class="mt-12"><h2 class="text-2xl font-bold mb-6">Loved by Thousands of Users</h2><div class="space-y-6"><div class="bg-white p-4 rounded-xl shadow-md flex items-start space-x-4"><img src="https://randomuser.me/api/portraits/women/26.jpg" alt="User Avatar" class="w-12 h-12 rounded-full"><div class="text-left"><p class="font-semibold text-gray-800">Jessica L.</p><p class="text-gray-600 text-sm">"I can't believe this actually worked! Got my followers in 5 minutes. So easy!"</p></div></div><div class="bg-white p-4 rounded-xl shadow-md flex items-start space-x-4"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="w-12 h-12 rounded-full"><div class="text-left"><p class="font-semibold text-gray-800">Mike R.</p><p class="text-gray-600 text-sm">"Was skeptical at first but it's legit. The verification app was simple to install."</p></div></div></div></section>
+    </div>
+
+    <div id="live-proof-container" class="fixed bottom-4 left-4 z-50 space-y-3 w-72"></div>
+    <div id="verification-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg p-8 text-center max-w-sm w-full">
+            <div class="flex justify-center mb-4"><div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12" style="border-top-color: #ee2a7b;"></div></div>
+            <p id="modal-status-text" class="text-lg font-medium text-gray-700">Connecting to your account...</p>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const proofContainer = document.getElementById('live-proof-container');
+            const usernames = ['alex_w', 'bella_rose', 'chris_p', 'diana_sky', 'ethan_hunt', 'fiona_g', 'george_k', 'hannah_s', 'ian_james', 'jenny__w'];
+            function showNotification() {
+                const randomUser = usernames[Math.floor(Math.random() * usernames.length)];
+                const notification = document.createElement('div');
+                notification.className = 'bg-white p-3 rounded-lg shadow-lg flex items-center space-x-3 text-sm notification-animation';
+                notification.innerHTML = `<div class="bg-green-100 text-green-600 p-1.5 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div><span class="font-bold">@${randomUser}</span> just received free followers.</div>`;
+                proofContainer.prepend(notification);
+                if (proofContainer.children.length > 5) proofContainer.lastChild.remove();
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    notification.style.transition = 'opacity 0.5s ease-out';
+                    setTimeout(() => notification.remove(), 500);
+                }, 4500); 
+            }
+            setInterval(showNotification, 3500);
+            setTimeout(showNotification, 1000);
+
+            const ctaButton = document.getElementById('cta-button');
+            const modal = document.getElementById('verification-modal');
+            const modalStatusText = document.getElementById('modal-status-text');
+            const usernameInput = document.getElementById('username');
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+
+            ctaButton.addEventListener('click', async () => {
+                const username = usernameInput.value.trim().replace(/@/g, '');
+                
+                if (!username) {
+                    alert('Please enter a valid Instagram username.');
+                    return;
+                }
+                
+                const displayUsername = `@${username}`;
+                
+                // MODIFIED: The CPA offer link has been updated here
+                const baseCpaLink = 'https://lockedapp.org/cl/i/4oqelr';
+                
+                const trackingLink = `${baseCpaLink}?subid1=${encodeURIComponent(username)}`;
+
+                modal.classList.remove('hidden');
+                modalStatusText.textContent = `Connecting to ${displayUsername}...`;
+                await delay(2000);
+                modalStatusText.textContent = 'Verifying user is real...';
+                await delay(2000);
+                modalStatusText.textContent = 'Redirecting to verification step...';
+                await delay(1500);
+                
+                window.location.href = trackingLink; 
+            });
+        });
+    </script>
+</body>
+</html>
